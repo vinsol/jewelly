@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  weight: 1
+  rate_per_carat: 1
+  price: 1
+  part: 
+
+two:
+  name: MyString
+  weight: 1
+  rate_per_carat: 1
+  price: 1
+  part: 

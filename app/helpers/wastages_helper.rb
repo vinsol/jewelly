@@ -1,0 +1,2 @@
+module WastagesHelper
+end

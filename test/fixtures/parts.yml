@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  net_weight: 1.5
+  gross_weight: 1.5
+  labour: 1
+  ornament: 
+
+two:
+  name: MyString
+  net_weight: 1.5
+  gross_weight: 1.5
+  labour: 1
+  ornament: 
