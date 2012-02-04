@@ -20,7 +20,7 @@ class Part < ActiveRecord::Base
 	end
 
 	def wastage
-		Wastage.where("wastages.from <= ? and wastages.to >= ?", ornament.finesse, ornament.finesse).first.value
+			Wastage.where("wastages.from <= ? and wastages.to >= ?", ornament.finesse, ornament.finesse).first.value
 	end
 
 end

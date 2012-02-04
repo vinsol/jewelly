@@ -4,7 +4,8 @@ class OrnamentsController < ApplicationController
   
   		config.columns.exclude :created_at, :updated_at
 
-		config.columns << :charges
+		config.list.columns << :charges
+		config.show.columns << :charges
   
 	end
 

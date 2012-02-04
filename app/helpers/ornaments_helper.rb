@@ -100,7 +100,11 @@ module OrnamentsHelper
 	end
 
 	def ornament_charges_column(record)
-		sprintf("%.2f",record.charges)
+		if record.charges
+			sprintf("%.2f",record.charges)
+		else
+			"N/A"
+		end
 	end
 
 end
