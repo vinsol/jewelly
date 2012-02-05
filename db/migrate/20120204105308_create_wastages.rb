@@ -1,8 +1,7 @@
 class CreateWastages < ActiveRecord::Migration
   def self.up
     create_table :wastages do |t|
-      t.integer :from
-      t.integer :to
+      t.integer :fineness
       t.float :value
 
       t.timestamps

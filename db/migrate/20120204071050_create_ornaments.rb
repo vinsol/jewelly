@@ -2,7 +2,7 @@ class CreateOrnaments < ActiveRecord::Migration
   def self.up
     create_table :ornaments do |t|
       t.string :name
-      t.integer :finesse
+      t.integer :fineness
 
       t.timestamps
     end

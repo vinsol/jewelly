@@ -9,7 +9,21 @@ Jewelly::Application.routes.draw do
 
   resources :parts do as_routes end
 
+ # resources :ornaments do as_routes end
+
+  # resources :ornaments do
+  #      collection do
+  #       get 'export'
+  #     end
+  #   end
+  
+  match 'ornaments/export' => 'ornaments#export'
+    
+  # match 'ornaments/import' => 'ornaments#import'
+  
   resources :ornaments do as_routes end
+          
+  resources :ornament_types do as_routes end    
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

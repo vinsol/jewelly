@@ -4,10 +4,15 @@ class Part < ActiveRecord::Base
 
 	has_many :stones
 	has_many :diamonds
+	
+	def gold_charges
+	  gold_rate = Conf.where(:name => "goldrate").first.value
+		purity_factor = (ornament.fineness == 14) ? 0.60 : 0.78
+		total_value = ((net_weight * wastage * gold_rate * purity_factor))
+  end
 
 	def charges
-		gold_rate = Conf.where(:name => "goldrate").first.value
-		total_value = ((net_weight * wastage * gold_rate * ornament.finesse)/24) + labour
+		total_value = gold_charges
 		
 		stones.each do |stone|
 			total_value += stone.charges
@@ -20,7 +25,7 @@ class Part < ActiveRecord::Base
 	end
 
 	def wastage
-			Wastage.where("wastages.from <= ? and wastages.to >= ?", ornament.finesse, ornament.finesse).first.value
+			Wastage.where("wastages.fineness= ?", ornament.fineness).first.value
 	end
 
 end

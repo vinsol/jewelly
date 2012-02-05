@@ -3,10 +3,10 @@ class Stone < ActiveRecord::Base
 	belongs_to :part
 
 	def charges
-		if rate_per_carat && weight
-			rate_per_carat * weight
+		if price.blank? || price == 0
+		  rate_per_carat * weight
 		else
-			price
+		  price			
 		end
 	end
 

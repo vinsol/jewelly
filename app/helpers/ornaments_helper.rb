@@ -19,10 +19,6 @@ module OrnamentsHelper
 						concat(content_tag(:label, part.gross_weight))
 						concat(content_tag :br)
 
-						concat(content_tag(:label, "Labour "))
-						concat(content_tag(:label, part.labour))
-						concat(content_tag :br)
-
 						concat(content_tag(:label, content_tag(:b, "Stones")))
 						concat(content_tag :br)
 						part_stones = part.stones

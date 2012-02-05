@@ -4,8 +4,6 @@ class DiamondsController < ApplicationController
 
   		config.columns.exclude :created_at, :updated_at
 
-#		config.columns << :charges
-
 	end
 
 end 

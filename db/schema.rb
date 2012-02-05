@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120204105308) do
+ActiveRecord::Schema.define(:version => 20120204153506) do
 
   create_table "confs", :force => true do |t|
     t.string   "name"
@@ -27,6 +27,16 @@ ActiveRecord::Schema.define(:version => 20120204105308) do
     t.integer  "part_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "number"
+    t.string   "clarity"
+    t.string   "color"
+  end
+
+  create_table "ornament_types", :force => true do |t|
+    t.string   "name"
+    t.string   "code"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "ornaments", :force => true do |t|
@@ -34,16 +44,20 @@ ActiveRecord::Schema.define(:version => 20120204105308) do
     t.integer  "finesse"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "description"
+    t.integer  "ornament_type_id"
+    t.integer  "labour"
+    t.string   "code"
   end
 
   create_table "parts", :force => true do |t|
     t.string   "name"
     t.float    "net_weight"
     t.float    "gross_weight"
-    t.integer  "labour"
     t.integer  "ornament_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "number_of_pieces"
   end
 
   create_table "stones", :force => true do |t|
