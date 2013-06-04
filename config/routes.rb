@@ -19,7 +19,7 @@ Jewelly::Application.routes.draw do
   
   match 'ornaments/export' => 'ornaments#export'
     
-  # match 'ornaments/import' => 'ornaments#import'
+  match 'ornaments/import' => 'ornaments#import'
   
   resources :ornaments do as_routes end
           
